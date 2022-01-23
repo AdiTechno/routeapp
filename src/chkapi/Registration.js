@@ -6,6 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 export default function Registration() { 
     const [reg,setReg] = useState([]);
     const [opencomp, setOpencomp]= useState(false)
+    
     useEffect(()=>{
         axios.get('http://schoolerp.schoolsupdate.co.in/api/StuRegistration/Getallregi').then((resp) => {
                    setReg(resp.data.allstureg) });
